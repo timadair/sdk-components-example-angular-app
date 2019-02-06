@@ -9,15 +9,17 @@ You can check out this repo, do an `npm install`, then skip ahead to the
 ## Install NodeJS & Angular CLI:
 If you haven't already done so, install NodeJS and the Angular CLI. The compatible node versions as of the time of writing this are 8.x or 10.x.
 
+#### Existing
 You should check [here](https://angular.io/guide/quickstart#prerequisites) to see that those are still the supported versions. If you've already installed node, great! lets just check the version `node -v` and check that we're good to go:
 
 <img src="src/assets/readme-thumbs/node_v.png">
 
 If not, either update node [via the cmdline](https://www.youtube.com/watch?v=C9gehlXhS6U) or just go through the steps as if you were installing it from scratch below.
 
+#### Download
 Go grab the binary for the apropriate platform from https://nodejs.org/ and come back here once done.
 
-<center><a hfre="https://nodejs.org/"><img src="src/assets/readme-thumbs/download-nodejs.png"></a></center>
+<a hfre="https://nodejs.org/"><img src="src/assets/readme-thumbs/download-nodejs.png"></a>
 
 
 Now that you've installed Node a whole magical world of packages and tools have opened up. .. 
@@ -36,7 +38,7 @@ You should be able to follow along with *0* familiarity as well, but you might _
 
 
 #### Lets get things rolling..
-
+<br/><br/><br/>
 
 
 ## Create a new App
@@ -148,7 +150,9 @@ The full app.component.html code should look something like the following:
 </div>
 <!-- end entity detail -->
 ```
+
 At this point your IDE will be showing lots of red underlines. Don't panic, that's totally normal. We're going to add the missing bits in the next step.
+<br/><br/><br/>
 
 ### Update controller logic (app.component.ts)
 First add the interface types from the SDK we'll be using. We'll want those so that the static analysis can catch any fumbles on our part. Open up app.component.ts and add the folowing to the top of the file:
@@ -272,7 +276,7 @@ java -jar "%HOMEPATH%\www\rest-api-server-java\target\sz-api-server-1.5.0.jar" -
 ```
 
 the result should be something like:
-<center><img src="src/assets/readme-thumbs/rest-server_start.png"></center>
+<img src="src/assets/readme-thumbs/rest-server_start.png">
 
 
 #### APP Server
@@ -282,23 +286,22 @@ Start up the angular dev server by opening a terminal up to our web app's root d
 It should serve up the web server on port 4200 by default
 <img src="src/assets/readme-thumbs/npm_start.png">
 
-<h3>Open up</h3>
 Open up a web browser to the address/port noted in the screen shot below. By default this will be http://localhost:4200/
 
-<center><img src="src/assets/readme-thumbs/unstyled.png"></center>
+<img src="src/assets/readme-thumbs/unstyled.png">
 
 
 
 ### Add a Theme to styles.scss
 By default things will come unstyled. There's a good reason for that, it's much easier to *add* styles than it is to remove them(ask any web dev). So in general component styles are *opt-in* rather than *opt-out*.
 
-Still though, it's pretty ugly huh. Luckily we include a few pre-built theme files, which is just the thing to add to make things a bit more presentable. Lets add one to the styles.scss file in the application:
+Still though, it's pretty ugly huh. Luckily we include a few pre-built theme files, which is just the thing to add to get things a bit more presentable. Lets add one to the styles.scss file in the application:
 
 ```scss
 @import '@senzing/sdk-components-ng/styles/themes/senzing.css';
 ```
 
 After refresh:
-<center><img src="src/assets/readme-thumbs/after-theme.png"></center>
+<img src="src/assets/readme-thumbs/after-theme.png">
 
 That feels better right? ;-)
