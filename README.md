@@ -315,7 +315,7 @@ Open up a web browser to the address/port noted in the screen shot below. By def
 ### Add a Theme (styles.scss)
 By default things will come unstyled. There's a good reason for that, it's much easier to *add* styles than it is to remove them(ask any web dev). So in general component styles are *opt-in* rather than *opt-out*.
 
-Still though, it's pretty ugly huh. Luckily we include a few pre-built theme files, which is just the thing to add to get things a bit more presentable. Lets add one to the styles.scss file in the application:
+Still though, it's pretty ugly huh? Luckily we include a few [pre-built theme files](https://senzing.github.io/sdk-components-ng/additional-documentation/themes/pre-built.html), which is just the thing to add to get things a bit more presentable. Lets add one to the styles.scss file in the application:
 
 ```scss
 @import '@senzing/sdk-components-ng/styles/themes/senzing.css';
