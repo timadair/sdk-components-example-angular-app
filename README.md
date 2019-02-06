@@ -6,7 +6,7 @@ This is an example web app using angular and components from the @senzing/sdk-co
 You can check out this repo, do an `npm install`, then skip ahead to the 
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
-## TOC:
+### TOC:
   - [Prerequisites](#install-nodejs--angular-cli)
   - [Create a new App](#create-a-new-app)
   - [Add SDKModule (app.module.ts)](#add-sdkmodule-appmodulets)
@@ -16,7 +16,7 @@ You can check out this repo, do an `npm install`, then skip ahead to the
   - [APP Server](#app-server)
   - [Add a Theme (styles.scss)](#add-a-theme-stylesscss)
 
-
+<br/><br/>
 
 ## Install NodeJS & Angular CLI
 If you haven't already done so, install NodeJS and the Angular CLI. The compatible node versions as of the time of writing this are 8.x or 10.x.
