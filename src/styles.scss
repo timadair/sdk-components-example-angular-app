@@ -3,6 +3,14 @@
 
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        --sz-search-button-clear-padding: 0 10px 0 10px;
+        --sz-search-button-submit-padding: 0 30px 0 30px;
+        --sz-search-button-margin: 0;
+        --sz-search-button-border-radius: 6px;
+        --sz-search-button-clear-font-size: 10px;
+        --sz-search-label-margin: 0 0 10px 4px;
+        --sz-search-input-border-radius: 6px;
     }
 
     // spinner animations

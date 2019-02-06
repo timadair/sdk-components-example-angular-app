@@ -289,6 +289,9 @@ For this example I've got the api server started using the default hostname and 
 
 Those are just the default locations, depending on how the install was set up to operate it could be anywhere the administrator specified it to be. _When in doubt, ask about_
 
+For more in depth information on G2Config Options and setup see [Senzing API [for Developers]
+](https://senzing.zendesk.com/hc/en-us/categories/360000120514-Senzing-API-for-Developers-) or http://docs.senzing.com/1.4/#g2config 
+
 #### API Server
 
 ```terminal
