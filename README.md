@@ -47,7 +47,7 @@ If you've never used node, angular, or typescript before you should check out so
 * [Learn Angular 7 in 50 Minutes](https://www.youtube.com/watch?v=5wtnKulcquA)
 * [Learn Angular from Scratch | Mosh](https://www.youtube.com/watch?v=k5E2AVpwsko)
 
-You should be able to follow along with *0* familiarity as well, but you might _not_ *know* they _*why*_ of why we're doing some things the way we are.
+You should be able to follow along with *0* familiarity as well, but you might _not_ *know* the _*why*_ of why we're doing some things the way we are.
 
 
 #### Lets get things rolling..
@@ -130,6 +130,10 @@ export class AppModule { }
 <br/><br/>
 
 ### Add sdk component tags (app.component.html)
+We're going to add a [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html), [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html), and a [SzEntityDetailComponent](https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html).
+The Search box to give us a search input interface, the results list(to display the results), and finally a detail view component(to give us a little more detail about the entity).
+
+
 The full app.component.html code should look something like the following:
 
 ```html
@@ -316,7 +320,7 @@ Still though, it's pretty ugly huh. Luckily we include a few pre-built theme fil
 ```scss
 @import '@senzing/sdk-components-ng/styles/themes/senzing.css';
 ```
-
+<br/><br/>
 After refresh:
 <img src="src/assets/readme-thumbs/after-theme.png">
 
