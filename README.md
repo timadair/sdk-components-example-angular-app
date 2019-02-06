@@ -7,22 +7,14 @@ You can check out this repo, do an `npm install`, then skip ahead to the
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
 ## TOC:
-- [Example Angular App using @senzing/sdk-components-ng](#example-angular-app-using-senzingsdk-components-ng)
-  - [Overview](#overview)
-  - [TOC:](#toc)
-  - [Install NodeJS & Angular CLI](#install-nodejs--angular-cli)
-      - [Existing](#existing)
-      - [Download](#download)
-    - [What is Node?](#what-is-node)
-      - [Lets get things rolling..](#lets-get-things-rolling)
+  - [Prerequisites](#install-nodejs--angular-cli)
   - [Create a new App](#create-a-new-app)
   - [Add SDKModule (app.module.ts)](#add-sdkmodule-appmodulets)
-    - [Add sdk component tags (app.component.html)](#add-sdk-component-tags-appcomponenthtml)
-    - [Update controller logic (app.component.ts)](#update-controller-logic-appcomponentts)
-    - [Start up Servers](#start-up-servers)
-      - [API Server](#api-server)
-      - [APP Server](#app-server)
-    - [Add a Theme (styles.scss)](#add-a-theme-stylesscss)
+  - [Add sdk component tags (app.component.html)](#add-sdk-component-tags-appcomponenthtml)
+  - [Update controller logic (app.component.ts)](#update-controller-logic-appcomponentts)
+  - [API Server](#api-server)
+  - [APP Server](#app-server)
+  - [Add a Theme (styles.scss)](#add-a-theme-stylesscss)
 
 
 
