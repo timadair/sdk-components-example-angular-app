@@ -6,7 +6,27 @@ This is an example web app using angular and components from the @senzing/sdk-co
 You can check out this repo, do an `npm install`, then skip ahead to the 
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
-## Install NodeJS & Angular CLI:
+## TOC:
+- [Example Angular App using @senzing/sdk-components-ng](#example-angular-app-using-senzingsdk-components-ng)
+  - [Overview](#overview)
+  - [TOC:](#toc)
+  - [Install NodeJS & Angular CLI](#install-nodejs--angular-cli)
+      - [Existing](#existing)
+      - [Download](#download)
+    - [What is Node?](#what-is-node)
+      - [Lets get things rolling..](#lets-get-things-rolling)
+  - [Create a new App](#create-a-new-app)
+  - [Add SDKModule (app.module.ts)](#add-sdkmodule-appmodulets)
+    - [Add sdk component tags (app.component.html)](#add-sdk-component-tags-appcomponenthtml)
+    - [Update controller logic (app.component.ts)](#update-controller-logic-appcomponentts)
+    - [Start up Servers](#start-up-servers)
+      - [API Server](#api-server)
+      - [APP Server](#app-server)
+    - [Add a Theme (styles.scss)](#add-a-theme-stylesscss)
+
+
+
+## Install NodeJS & Angular CLI
 If you haven't already done so, install NodeJS and the Angular CLI. The compatible node versions as of the time of writing this are 8.x or 10.x.
 
 #### Existing
@@ -56,7 +76,7 @@ Install the sdk components:
 npm install @senzing/sdk-components-ng --save
 ```
 
-## Add SDKModule to app.module.ts
+## Add SDKModule (app.module.ts)
 In app.module add the following import:
 ```typescript
 import { SenzingSdkModule, SzRestConfiguration  } from '@senzing/sdk-components-ng';
@@ -114,7 +134,7 @@ export function SzRestConfigurationFactory() {
 export class AppModule { }
 ```
 
-### Add sdk components to app.component.html
+### Add sdk component tags (app.component.html)
 The full app.component.html code should look something like the following:
 
 ```html
@@ -292,7 +312,7 @@ Open up a web browser to the address/port noted in the screen shot below. By def
 
 
 
-### Add a Theme to styles.scss
+### Add a Theme (styles.scss)
 By default things will come unstyled. There's a good reason for that, it's much easier to *add* styles than it is to remove them(ask any web dev). So in general component styles are *opt-in* rather than *opt-out*.
 
 Still though, it's pretty ugly huh. Luckily we include a few pre-built theme files, which is just the thing to add to get things a bit more presentable. Lets add one to the styles.scss file in the application:
