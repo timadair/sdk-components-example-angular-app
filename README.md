@@ -35,7 +35,9 @@ If you've never used node, angular, or typescript before you should check out so
 You should be able to follow along with *0* familiarity as well, but you might _not_ *know* they _*why*_ of why we're doing some things the way we are.
 
 
-### Lets get things rolling..
+#### Lets get things rolling..
+
+
 
 ## Create a new App
 
