@@ -1,12 +1,15 @@
 # Example Angular App using @senzing/sdk-components-ng
 
+## Overview
+This is an example web app using angular and components from the @senzing/sdk-components-ng package. It is meant to serve as a living document illustrating the steps necessary to get up and running with the web components connecting to a G2 project datasource through the [Senzing API Server](https://github.com/Senzing/senzing-api-server).
+
+You can check out this repo, do an `npm install`, then skip ahead to the 
+[Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
+
 ## Install NodeJS & Angular CLI:
-If you haven't already done so, install NodeJS and the Angular CLI.
+If you haven't already done so, install NodeJS and the Angular CLI. The compatible node versions as of the time of writing this are 8.x or 10.x.
 
-The compatible node versions as of the time of writing this are: 
-version 8.x or 10.x.
-
-But you should check [here](https://angular.io/guide/quickstart#prerequisites) to see that those are still the supported versions. If you've already installed node, great! lets just check the version `node -v` and check that we're good to go:
+You should check [here](https://angular.io/guide/quickstart#prerequisites) to see that those are still the supported versions. If you've already installed node, great! lets just check the version `node -v` and check that we're good to go:
 
 <img src="src/assets/readme-thumbs/node_v.png">
 
@@ -241,7 +244,7 @@ export class AppComponent {
 }
 
 ```
-### Start up Server(s)
+### Start up Servers
 Start up the [Senzing API Server](https://github.com/Senzing/senzing-api-server). If you don't already have an instance of the rest server accessible to you over the network or on your local machine one you will have to set one up. 
 
 For this example I've got the api server started using the default hostname and port(http://localhost:2208) and using the same G2.ini that my [Senzing Desktop App](https://senzing.com/senzing-app) install is using. (see default locations below)
