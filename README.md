@@ -1,12 +1,13 @@
 # Example Angular App using @senzing/sdk-components-ng
 
+
 ## Overview
 This is an example web app using angular and components from the @senzing/sdk-components-ng package. It is meant to serve as a living document illustrating the steps necessary to get up and running with the web components connecting to a G2 project datasource through the [Senzing API Server](https://github.com/Senzing/senzing-api-server).
 
 You can check out this repo, do an `npm install`, then skip ahead to the 
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
-### TOC:
+### Steps:
   - [Prerequisites](#install-nodejs--angular-cli)
   - [Create a new App](#create-a-new-app)
   - [Add SDKModule (app.module.ts)](#add-sdkmodule-appmodulets)
@@ -40,7 +41,7 @@ Lets install the angular cli tool using some of that new power.
 npm install -g @angular/cli@1.7.1
 ```
 
-### What is Node?
+#### What is Node?
 If you've never used node, angular, or typescript before you should check out some of the many arcticles or videos on the subject.
 * [Learn Node in 1 Hour | Mosh](https://www.youtube.com/watch?v=TlB_eWDSMt4)
 * [Learn Angular 7 in 50 Minutes](https://www.youtube.com/watch?v=5wtnKulcquA)
@@ -50,7 +51,7 @@ You should be able to follow along with *0* familiarity as well, but you might _
 
 
 #### Lets get things rolling..
-<br/><br/><br/>
+<br/><br/>
 
 
 ## Create a new App
@@ -67,6 +68,7 @@ Install the sdk components:
 ```
 npm install @senzing/sdk-components-ng --save
 ```
+<br/><br/>
 
 ## Add SDKModule (app.module.ts)
 In app.module add the following import:
@@ -125,6 +127,7 @@ export function SzRestConfigurationFactory() {
 })
 export class AppModule { }
 ```
+<br/><br/>
 
 ### Add sdk component tags (app.component.html)
 The full app.component.html code should look something like the following:
@@ -162,7 +165,7 @@ The full app.component.html code should look something like the following:
 </div>
 <!-- end entity detail -->
 ```
-
+<br/>
 At this point your IDE will be showing lots of red underlines. Don't panic, that's totally normal. We're going to add the missing bits in the next step.
 <br/><br/><br/>
 
@@ -186,12 +189,13 @@ They are:
 * onSearchResultClick (to handle when a entity item in the search results list is clicked on)
 * onBackToSearchResultsClick (when on the entity detail page, and the user wants to go back to the search results list)
 
+
 We'll also need a few variables, mostly for state tracking but also to pipe outputs from some of the components in to others.
 * currentSearchResults (to hold the event output of the onSearchResults handler)
 * currentSearchParameters (to hold the current parameters that search was performed with)
 * currentlySelectedEntityId (to hold the entityId of a item that was clicked on from onSearchResultClick)
 
-
+<br/><br/>
 
 The full app.component.ts code should look something like the following:
 
