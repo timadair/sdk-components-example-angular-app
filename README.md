@@ -328,3 +328,27 @@ After refresh:
 <img src="src/assets/readme-thumbs/after-theme.png">
 
 That feels better right? ;-)
+
+### Dockerizing
+
+For extra credit you can dockerize this example. The easiest way is to use [docker 
+compose](https://docs.docker.com/compose/) to build and start the image.
+
+```
+docker-compose up -d --build
+```
+
+That will build a image based off of NodeJS 10.15.1, and start up the container. By default the Examples Webapp will be deployed on http://localhost:4200/ with the default api configuration pointing at http://localhost:8080
+
+If everything worked, you should now be able to open a web browser up and it should look exactly the same as running the `npm start` command.
+
+To shut the container back down just type:
+```
+docker-compose stop
+```
+
+
+#### Configuration
+
+The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in src/environments/environment.docker.ts
+
