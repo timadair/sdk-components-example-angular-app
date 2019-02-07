@@ -328,6 +328,7 @@ After refresh:
 <img src="src/assets/readme-thumbs/after-theme.png">
 
 That feels better right? ;-)
+<br/><br/>
 
 ### Dockerizing
 
