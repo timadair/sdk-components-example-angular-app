@@ -353,3 +353,5 @@ docker-compose stop
 
 The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in src/environments/environment.docker.ts
 
+The values for the apiConfig constant is exactly the same as the [@senzing/rest-api-client-ng#ConfigurationParameters](https://senzing.github.io/rest-api-client-ng/interfaces/ConfigurationParameters.html)interface. 
+
