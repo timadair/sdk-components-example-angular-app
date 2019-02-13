@@ -74,8 +74,8 @@ npm install @senzing/sdk-components-ng --save
 ```
 
 
-## Add SDKModule ([app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts))
-In [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts) add the following import:
+## Add SDKModule ([app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.module.ts))
+In [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.module.ts) add the following import:
 ```typescript
 import { SenzingSdkModule, SzRestConfiguration  } from '@senzing/sdk-components-ng';
 ```
@@ -100,7 +100,7 @@ imports: [
   ],
 ```
 
-the full [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts) code should look something  like the following:
+the full [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.module.ts) code should look something  like the following:
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -133,7 +133,7 @@ export class AppModule { }
 ```
 <br/><br/>
 
-### Add sdk component tags ([app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html))
+### Add sdk component tags ([app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.component.html))
 
 We're going to use three components from the [Senzing SDK Components](https://github.com/Senzing/sdk-components-ng) package.
 
@@ -152,7 +152,7 @@ We're going to use three components from the [Senzing SDK Components](https://gi
   </tr>
 </table>
 
-The full [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html) code should look something like the following:
+The full [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.component.html) code should look something like the following:
 
 ```html
 <div style="text-align:left; font-weight: bold; font-size: 1.5em">
@@ -191,8 +191,8 @@ The full [app.component.html](https://github.com/Senzing/sdk-components-example-
 At this point your IDE will be showing lots of red underlines. Don't panic, that's totally normal. We're going to add the missing bits in the next step.
 <br/><br/><br/>
 
-### Update controller logic ([app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts))
-First add the interface types from the SDK we'll be using. We'll want those so that the static analysis can catch any fumbles on our part. Open up [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts) and add the folowing to the top of the file:
+### Update controller logic ([app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.component.ts))
+First add the interface types from the SDK we'll be using. We'll want those so that the static analysis can catch any fumbles on our part. Open up [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.component.ts) and add the folowing to the top of the file:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -203,7 +203,7 @@ import {
 ```
 
 
-Now lets add those event handlers and variables that we referenced in the [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html) file above.
+Now lets add those event handlers and variables that we referenced in the [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.component.html) file above.
 They are:
 * onSearchResults (when a search is performed we want to know the results)
 * onSearchResultsCleared (to handle when the search form is cleared)
@@ -217,9 +217,9 @@ We'll also need a few variables, mostly for state tracking but also to pipe outp
 * currentSearchParameters (to hold the current parameters that search was performed with)
 * currentlySelectedEntityId (to hold the entityId of a item that was clicked on from onSearchResultClick)
 
-<br/><br/>
+<br/>
 
-The full [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts) code should look something like the following:
+The full [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/app/app.component.ts) code should look something like the following:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -364,7 +364,7 @@ docker-compose stop
 
 #### Configuration
 
-The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in [src/environments/environment.docker.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/environments/environment.docker.ts)
+The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in [src/environments/environment.docker.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/master/src/environments/environment.docker.ts)
 
 The values for the apiConfig constant is exactly the same as the [@senzing/rest-api-client-ng#ConfigurationParameters](https://senzing.github.io/rest-api-client-ng/interfaces/ConfigurationParameters.html) interface. 
 
