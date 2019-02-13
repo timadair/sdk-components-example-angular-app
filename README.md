@@ -140,15 +140,15 @@ We're going to use three components from the [Senzing SDK Components](https://gi
 <table>
   <tr>
     <td><img src="src/assets/readme-thumbs/sdk-component-search.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzSearch Component Screen Shot"></td>
-    <td>1. [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html): The search input interface</td>
+    <td>1. <a href="https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html">SzSearchComponent</a>: The search input interface</td>
   </tr>
   <tr>
     <td><img src="src/assets/readme-thumbs/sdk-component-list.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; margin: 0 30px 0 30px; width: 290px; display: inline-block;" alt="SzSearchResults Component Screen Shot"></td>
-    <td>2. [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html): A list of matching and related entities</td>
+    <td>2. <a href="https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html">SzSearchResultsComponent</a>: A list of matching and related entities</td>
   </tr>
   <tr>
     <td><img src="src/assets/readme-thumbs/sdk-component-detail.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzEntityDetail Component Screen Shot"></td>
-    <td>3. [SzEntityDetailComponent](https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html): A clickable view with additional details</td>
+    <td>3. <a href="https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html">SzEntityDetailComponent</a>: A clickable view with additional details</td>
   </tr>
 </table>
 
@@ -338,7 +338,7 @@ Still though, it's pretty ugly huh? Included are a few [pre-built theme files](h
 ```
 <br/><br/>
 After refresh:
-<img src="src/assets/readme-thumbs/after-theme.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
+<img src="src/assets/readme-thumbs/tut-complete.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 
 That feels better right? ;-)
 <br/><br/>
@@ -366,5 +366,5 @@ docker-compose stop
 
 The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in [src/environments/environment.docker.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/environments/environment.docker.ts)
 
-The values for the apiConfig constant is exactly the same as the [@senzing/rest-api-client-ng#ConfigurationParameters](https://senzing.github.io/rest-api-client-ng/interfaces/ConfigurationParameters.html)interface. 
+The values for the apiConfig constant is exactly the same as the [@senzing/rest-api-client-ng#ConfigurationParameters](https://senzing.github.io/rest-api-client-ng/interfaces/ConfigurationParameters.html) interface. 
 
