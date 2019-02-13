@@ -8,7 +8,7 @@ You can check out this repo, do an `npm install`, then skip ahead to the
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
 <div style="text-align: center; margin: 10px 0 30px">
-  <img src="src/assets/readme-thumbs/after-theme.png"style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
+  <img src="src/assets/readme-thumbs/tut-complete.png">
 </div>
 
 ### Steps:
@@ -72,9 +72,9 @@ Install the sdk components:
 ```
 npm install @senzing/sdk-components-ng --save
 ```
-<br/><br/>
 
-## Add SDKModule (app.module.ts)
+
+## Add SDKModule ([app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts))
 In [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts) add the following import:
 ```typescript
 import { SenzingSdkModule, SzRestConfiguration  } from '@senzing/sdk-components-ng';
@@ -133,20 +133,24 @@ export class AppModule { }
 ```
 <br/><br/>
 
-### Add sdk component tags (app.component.html)
+### Add sdk component tags ([app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html))
 
 We're going to use three components from the [Senzing SDK Components](https://github.com/Senzing/sdk-components-ng) package.
 
-<img src="src/assets/readme-thumbs/sdk-component-search.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzSearch Component Screen Shot">
-
-<img src="src/assets/readme-thumbs/sdk-component-list.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; margin: 0 30px 0 30px; width: 290px; display: inline-block;" alt="SzSearchResults Component Screen Shot">
-
-<img src="src/assets/readme-thumbs/sdk-component-detail.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzEntityDetail Component Screen Shot">
-
-1. [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html): The search input interface
-2. [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html): A list of matching and related entities
-3. [SzEntityDetailComponent](https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html): A clickable view with additional details
-
+<table>
+  <tr>
+    <td><img src="src/assets/readme-thumbs/sdk-component-search.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzSearch Component Screen Shot"></td>
+    <td>1. [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html): The search input interface</td>
+  </tr>
+  <tr>
+    <td><img src="src/assets/readme-thumbs/sdk-component-list.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; margin: 0 30px 0 30px; width: 290px; display: inline-block;" alt="SzSearchResults Component Screen Shot"></td>
+    <td>2. [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html): A list of matching and related entities</td>
+  </tr>
+  <tr>
+    <td><img src="src/assets/readme-thumbs/sdk-component-detail.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzEntityDetail Component Screen Shot"></td>
+    <td>3. [SzEntityDetailComponent](https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html): A clickable view with additional details</td>
+  </tr>
+</table>
 
 The full [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html) code should look something like the following:
 
