@@ -243,7 +243,6 @@ export class AppComponent {
   }
 
   onSearchResults(evt: SzAttributeSearchResult[]){
-    console.log('searchResults: ',evt);
     // store on current scope
     this.currentSearchResults = evt;
     // results module is bound to this property
@@ -258,9 +257,6 @@ export class AppComponent {
   }
 
   public onSearchResultClick(entityData: SzAttributeSearchResult){
-    console.log('onSearchResultClick: ', entityData);
-    //alert('clicked on search result!'+ entityData.entityId);
-
     if(entityData && entityData.entityId > 0) {
       this.currentlySelectedEntityId = entityData.entityId;
       this.showSearchResults = false;
@@ -278,7 +274,6 @@ export class AppComponent {
   }
 
   public onSearchParameterChange(searchParams: SzEntitySearchParams) {
-    console.log('onSearchParameterChange: ', searchParams);
     this.currentSearchParameters = searchParams;
   }
 }
