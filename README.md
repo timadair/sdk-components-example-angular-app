@@ -187,7 +187,7 @@ The full [app.component.html](https://github.com/Senzing/sdk-components-example-
 At this point your IDE will be showing lots of red underlines. Don't panic, that's totally normal. We're going to add the missing bits in the next step.
 <br/><br/><br/>
 
-### Update controller logic [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts)
+### Update controller logic ([app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts))
 First add the interface types from the SDK we'll be using. We'll want those so that the static analysis can catch any fumbles on our part. Open up [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts) and add the folowing to the top of the file:
 
 ```typescript
