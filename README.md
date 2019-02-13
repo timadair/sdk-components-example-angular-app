@@ -7,6 +7,10 @@ This is an example web app using angular and components from the @senzing/sdk-co
 You can check out this repo, do an `npm install`, then skip ahead to the 
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
+<div style="text-align: center;">
+  <img src="src/assets/readme-thumbs/after-theme.png">
+</div>
+
 ### Steps:
   - [Prerequisites](#install-nodejs--angular-cli)
   - [Create a new App](#create-a-new-app)
@@ -17,7 +21,7 @@ You can check out this repo, do an `npm install`, then skip ahead to the
   - [APP Server](#app-server)
   - [Add a Theme (styles.scss)](#add-a-theme-stylesscss)
 
-<br/><br/>
+<br/>
 
 ## Install NodeJS & Angular CLI
 If you haven't already done so, install NodeJS and the Angular CLI. The compatible node versions as of the time of writing this are 8.x or 10.x.
@@ -25,14 +29,14 @@ If you haven't already done so, install NodeJS and the Angular CLI. The compatib
 #### Existing
 You should check [here](https://angular.io/guide/quickstart#prerequisites) to see that those are still the supported versions. If you've already installed node, great! lets just check the version `node -v` and check that we're good to go:
 
-<img src="src/assets/readme-thumbs/node_v.png">
+<img src="src/assets/readme-thumbs/node_v.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 
 If not, either update node [via the cmdline](https://www.youtube.com/watch?v=C9gehlXhS6U) or just go through the steps as if you were installing it from scratch below.
 
 #### Download
 Go grab the binary for the apropriate platform from https://nodejs.org/ and come back here once done.
 
-<a hfre="https://nodejs.org/"><img src="src/assets/readme-thumbs/download-nodejs.png"></a>
+<a hfre="https://nodejs.org/"><img src="src/assets/readme-thumbs/download-nodejs.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;"></a>
 
 
 Now that you've installed Node a whole magical world of packages and tools have opened up. .. 
@@ -47,11 +51,11 @@ If you've never used node, angular, or typescript before you should check out so
 * [Learn Angular 7 in 50 Minutes](https://www.youtube.com/watch?v=5wtnKulcquA)
 * [Learn Angular from Scratch | Mosh](https://www.youtube.com/watch?v=k5E2AVpwsko)
 
-You should be able to follow along with *0* familiarity as well, but you might _not_ *know* the _*why*_ of why we're doing some things the way we are.
+You should be able to follow along with no familiarity as well, but you might _not_ *know* the _*why*_ of why we're doing some things the way we are.
 
 
 #### Lets get things rolling..
-<br/><br/>
+<br>
 
 
 ## Create a new App
@@ -71,7 +75,7 @@ npm install @senzing/sdk-components-ng --save
 <br/><br/>
 
 ## Add SDKModule (app.module.ts)
-In app.module add the following import:
+In [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts) add the following import:
 ```typescript
 import { SenzingSdkModule, SzRestConfiguration  } from '@senzing/sdk-components-ng';
 ```
@@ -96,7 +100,7 @@ imports: [
   ],
 ```
 
-the full app.module.ts code should look something  like the following:
+the full [app.module.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.module.ts) code should look something  like the following:
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -130,11 +134,21 @@ export class AppModule { }
 <br/><br/>
 
 ### Add sdk component tags (app.component.html)
-We're going to add a [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html), [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html), and a [SzEntityDetailComponent](https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html).
-The Search box to give us a search input interface, the results list(to display the results), and finally a detail view component(to give us a little more detail about the entity).
+
+We're going to use three components from the [Senzing SDK Components](https://github.com/Senzing/sdk-components-ng) package.
+
+<img src="src/assets/readme-thumbs/sdk-component-search.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;" alt="SzSearch Component Screen Shot">
+
+<img src="src/assets/readme-thumbs/sdk-component-list.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;" alt="SzSearchResults Component Screen Shot">
+
+<img src="src/assets/readme-thumbs/sdk-component-detail.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;" alt="SzEntityDetail Component Screen Shot">
+
+1. [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html): The search input interface
+2. [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html): A list of matching and related entities
+3. [SzEntityDetailComponent](https://senzing.github.io/sdk-components-ng/components/SzEntityDetailComponent.html): A clickable view with additional details
 
 
-The full app.component.html code should look something like the following:
+The full [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html) code should look something like the following:
 
 ```html
 <div style="text-align:left; font-weight: bold; font-size: 1.5em">
@@ -173,8 +187,8 @@ The full app.component.html code should look something like the following:
 At this point your IDE will be showing lots of red underlines. Don't panic, that's totally normal. We're going to add the missing bits in the next step.
 <br/><br/><br/>
 
-### Update controller logic (app.component.ts)
-First add the interface types from the SDK we'll be using. We'll want those so that the static analysis can catch any fumbles on our part. Open up app.component.ts and add the folowing to the top of the file:
+### Update controller logic [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts)
+First add the interface types from the SDK we'll be using. We'll want those so that the static analysis can catch any fumbles on our part. Open up [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts) and add the folowing to the top of the file:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -185,7 +199,7 @@ import {
 ```
 
 
-Now lets add those event handlers and variables that we referenced in the app.component.html file above.
+Now lets add those event handlers and variables that we referenced in the [app.component.html](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.html) file above.
 They are:
 * onSearchResults (when a search is performed we want to know the results)
 * onSearchResultsCleared (to handle when the search form is cleared)
@@ -201,7 +215,7 @@ We'll also need a few variables, mostly for state tracking but also to pipe outp
 
 <br/><br/>
 
-The full app.component.ts code should look something like the following:
+The full [app.component.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/app/app.component.ts) code should look something like the following:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -299,7 +313,7 @@ java -jar "%HOMEPATH%\www\rest-api-server-java\target\sz-api-server-1.5.0.jar" -
 ```
 
 the result should be something like:
-<img src="src/assets/readme-thumbs/rest-server_start.png">
+<img src="src/assets/readme-thumbs/rest-server_start.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 
 
 #### APP Server
@@ -307,25 +321,25 @@ the result should be something like:
 Start up the angular dev server by opening a terminal up to our web app's root directory and type `npm start`
 
 It should serve up the web server on port 4200 by default
-<img src="src/assets/readme-thumbs/npm_start.png">
+<img src="src/assets/readme-thumbs/npm_start.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 
 Open up a web browser to the address/port noted in the screen shot below. By default this will be http://localhost:4200/
 
-<img src="src/assets/readme-thumbs/unstyled.png">
+<img src="src/assets/readme-thumbs/unstyled.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 
 
 
 ### Add a Theme (styles.scss)
-By default things will come unstyled. There's a good reason for that, it's much easier to *add* styles than it is to remove them(ask any web dev). So in general component styles are *opt-in* rather than *opt-out*.
+By default components will come unstyled. It's much easier to *add* styles than it is to remove them(ask any web dev). So in general component styles are *opt-in* rather than *opt-out*.
 
-Still though, it's pretty ugly huh? Luckily we include a few [pre-built theme files](https://senzing.github.io/sdk-components-ng/additional-documentation/themes/pre-built.html), which is just the thing to add to get things a bit more presentable. Lets add one to the styles.scss file in the application:
+Still though, it's pretty ugly huh? Included are a few [pre-built theme files](https://senzing.github.io/sdk-components-ng/additional-documentation/themes/pre-built.html), which is just the thing to add to get things a bit more presentable. Lets add one to the styles.scss file in the application:
 
 ```scss
 @import '@senzing/sdk-components-ng/styles/themes/senzing.css';
 ```
 <br/><br/>
 After refresh:
-<img src="src/assets/readme-thumbs/after-theme.png">
+<img src="src/assets/readme-thumbs/after-theme.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 
 That feels better right? ;-)
 <br/><br/>
@@ -351,7 +365,7 @@ docker-compose stop
 
 #### Configuration
 
-The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in src/environments/environment.docker.ts
+The docker build uses a different angular environment file. If you are running the API Server on a different address than http://localhots:8080, you will want to set the appropriate values in that file. The file is located in [src/environments/environment.docker.ts](https://github.com/Senzing/sdk-components-example-angular-app/blob/initial-commit/src/environments/environment.docker.ts)
 
 The values for the apiConfig constant is exactly the same as the [@senzing/rest-api-client-ng#ConfigurationParameters](https://senzing.github.io/rest-api-client-ng/interfaces/ConfigurationParameters.html)interface. 
 
