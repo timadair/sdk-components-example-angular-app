@@ -7,8 +7,8 @@ This is an example web app using angular and components from the @senzing/sdk-co
 You can check out this repo, do an `npm install`, then skip ahead to the 
 [Start up Server(s) section](#Start-up-Servers). Or you can follow along with the steps below to create your own, and if you run in to any problems you can refer back to this code.
 
-<div style="text-align: center;">
-  <img src="src/assets/readme-thumbs/after-theme.png">
+<div style="text-align: center; margin: 10px 0 30px">
+  <img src="src/assets/readme-thumbs/after-theme.png"style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;">
 </div>
 
 ### Steps:
@@ -137,11 +137,11 @@ export class AppModule { }
 
 We're going to use three components from the [Senzing SDK Components](https://github.com/Senzing/sdk-components-ng) package.
 
-<img src="src/assets/readme-thumbs/sdk-component-search.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;" alt="SzSearch Component Screen Shot">
+<img src="src/assets/readme-thumbs/sdk-component-search.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzSearch Component Screen Shot">
 
-<img src="src/assets/readme-thumbs/sdk-component-list.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;" alt="SzSearchResults Component Screen Shot">
+<img src="src/assets/readme-thumbs/sdk-component-list.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; margin: 0 30px 0 30px; width: 290px; display: inline-block;" alt="SzSearchResults Component Screen Shot">
 
-<img src="src/assets/readme-thumbs/sdk-component-detail.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px;" alt="SzEntityDetail Component Screen Shot">
+<img src="src/assets/readme-thumbs/sdk-component-detail.png" style="border: 1px solid #C0C0C0; border-radius: 4px; padding: 4px; width: 290px; display: inline-block;" alt="SzEntityDetail Component Screen Shot">
 
 1. [SzSearchComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchComponent.html): The search input interface
 2. [SzSearchResultsComponent](https://senzing.github.io/sdk-components-ng/components/SzSearchResultsComponent.html): A list of matching and related entities
